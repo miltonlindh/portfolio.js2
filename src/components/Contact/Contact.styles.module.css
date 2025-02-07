@@ -1,0 +1,104 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 20px;
+    width: fit-content;
+}
+  
+.sectionTitle {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: var(--text-color);
+    position: relative;
+}
+  
+.sectionTitle::after {
+    content: '';
+    width: 80px;
+    height: 3px;
+    background-color: var(--btn-color);
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+  
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    max-width: 500px;
+}
+  
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+  
+.visuallyHidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+    border: 0;
+}
+  
+input,
+textarea {
+    padding: 15px;
+    border: 1px solid var(--form-border-color);
+    border-radius: 5px;
+    background-color: var(--input-background-color);
+    color: var(--input-text-color);
+    font-size: 1rem;
+    transition: border-color 0.3s, background-color 0.3s, color 0.3s;
+}
+
+
+textarea {
+    height: 200px; 
+    resize: none; 
+}
+  
+input:focus,
+textarea:focus {
+    border-color: var(--btn-color);
+    outline: none;
+}
+  
+::placeholder {
+    color: var(--placeholder-color);
+}
+  
+.btn {
+    align-self: flex-end;
+    background-color: var(--btn-color);
+    color: var(--btn-text-color);
+    border: none;
+    border-radius: 30px;
+    padding: 12px 24px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+  
+.btn:hover {
+    background-color: var(--btn-hover-color);
+    transform: translateY(-3px);
+}
+  
+.btn:active {
+    transform: translateY(1px);
+}
+@media (min-width: 1400px){
+    .container{
+        width: 170%;
+    }
+}

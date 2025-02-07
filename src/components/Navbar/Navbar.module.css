@@ -1,0 +1,31 @@
+.navbar {
+    position: sticky;/*gör så att navbar hänger med när man skrollar */
+    top: 0;
+    background-color: var(--bavkground-color);
+    padding: 1rem;
+    z-index: 1000; 
+    
+  }
+  
+  .navbar ul {
+    list-style-type: none;
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .navbar li {
+    display: inline;
+  }
+  
+  .navbar a {
+    text-decoration: none;
+    font-family: 'Roboto Mono', monospace;
+    color: var(--text-color);
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+  
+  .navbar a:hover {
+    color: var(--text-color);
+  }
+  
